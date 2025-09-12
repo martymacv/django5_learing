@@ -1,1 +1,30 @@
-/.venv
+# Исключить папки __pycache__
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+
+# Исключить исполняемые файлы (Unix)
+*.exe
+*.out
+*.app
+
+# Исключить бинарные файлы Python
+*.pyc
+*.pyo
+*.pyd
+
+# Исключить кэш и временные файлы
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Исключить виртуальные окружения
+venv/
+env/
+.venv/
+
+# Исключить файлы IDE
+.vscode/
+.idea/
+*.swp
+*.swo
