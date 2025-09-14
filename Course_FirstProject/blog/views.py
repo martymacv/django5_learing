@@ -10,5 +10,6 @@ def index(request):
 def about(request):
     return HttpResponse("<h2>О нас</h2>")
 
+
 def contact(request):
     return HttpResponse("<h2>Контакты</h2>")
