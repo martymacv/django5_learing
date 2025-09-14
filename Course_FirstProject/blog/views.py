@@ -1,15 +1,15 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.template.response import TemplateResponse
+from django.shortcuts import render, redirect
 
 
-# Create your views here.
 def index(request):
-    return HttpResponse("<h2>Главная</h2>")
-
-
-def about(request):
-    return HttpResponse("<h2>О нас</h2>")
+    return render(request, 'blog/index.html', context={'site': 'mysite.com'})
 
 
 def contact(request):
-    return HttpResponse("<h2>Контакты</h2>")
+    return redirect('blog:about')
+
+
+def about(request):
+    return render(request, 'blog/about.html', context={'site': 'Stepik'})
